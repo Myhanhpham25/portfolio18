@@ -3,7 +3,7 @@ My Portfolio:
 
 Simple one page. 
 
-#Usage 
+# Usage 
 
 https://startbootstrap.com/template-overviews/creative/
 * http://fontawesome.io/icons/
@@ -11,4 +11,4 @@ https://startbootstrap.com/template-overviews/creative/
 * https://twitter.com/SBootstrap
 
 
-# portfolio18
+

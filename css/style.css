@@ -17,12 +17,16 @@
 }
 
 .buttoncolor{
-	background-color: #00ced1;
+	background-color: 00ced1;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .backgroundColor{
 	background: linear-gradient(to bottom right, #00ced1, #3db9e9);	
+}
+
+.grayColor{
+	background: linear-gradient(to bottom right, #F0F8FF, 	#F0FFFF);	
 }
 
 .icon{
@@ -42,3 +46,56 @@
 	display: none;
 	transition: all 2s ease-in-out;
 }*/
+
+.colorChange {
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+	0%{
+	background-color: #696969;
+	}
+  50% {
+    background-color: #00ced1;
+  }
+  100% {
+    background-color: ##3db9e9;
+  }
+}
+
+.proj {
+  animation: 
+ /*   pulse 3s ease infinite alternate, */
+    nudge 5s linear infinite alternate;
+}
+
+@keyframes nudge {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  
+  50% {
+    transform: translate(150px, 0);
+  }
+  
+  80% {
+    transform: translate(-150px, 0);
+  }
+}
+
+.box {
+  background: ##00ced1;
+  border-radius: 6px;
+  cursor: pointer;
+  /*height: 95px;*/
+  /*line-height: 95px;*/
+  text-align: center;
+  transition-property: background, border-radius;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  /*width: 95px;*/
+}
+.box:hover {
+  background: #696969;
+  border-radius: 50%;
+}

@@ -33,6 +33,8 @@
 
 .icon{
 	margin-right: 1em;
+  box-shadow: 5px 5px grey;
+
 }
 
 .place{
@@ -43,11 +45,6 @@
 	width:60px;
 	border-radius:50%
 }
-
-/*#language, #frameworks{
-	display: none;
-	transition: all 2s ease-in-out;
-}*/
 
 .colorChange {
   animation: pulse 5s infinite;
@@ -105,7 +102,7 @@
 
 .rainier{
   position: relative;
-  background-image: url("../img/rainier.jpg");
+  background-image: url("../img/rainier.png");
   background-size: cover;
   background-attachment: fixed;
  

@@ -224,7 +224,8 @@ header.masthead {
 
 .btn-primary {
   background-color: #48d1cc;
-  border-color: #48d1cc; }
+  border-color: #48d1cc; 
+}
 
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
     color: #fff;

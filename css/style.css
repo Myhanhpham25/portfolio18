@@ -9,6 +9,8 @@
 
 .background{
 	  background-image: url("../img/beach.png");
+    background-size: cover;
+    background-attachment: fixed;
 	}
 
 .fontcolor{
@@ -94,8 +96,17 @@
   transition-duration: 1s;
   transition-timing-function: linear;
   /*width: 95px;*/
+  margin-left: .5em;
 }
 .box:hover {
   background: #696969;
   border-radius: 50%;
+}
+
+.rainier{
+  position: relative;
+  background-image: url("../img/rainier.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+ 
 }

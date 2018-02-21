@@ -107,3 +107,8 @@
   background-attachment: fixed;
  
 }
+
+.footer{
+  display: block;
+  text-align: center;
+}

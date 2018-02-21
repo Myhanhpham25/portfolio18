@@ -18,61 +18,85 @@
     <link href="css/creative.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- projects section css features  -->
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/common.css">
+    <script src="static/js/jquery-1.11.0.min.js"></script>
+    <script src="static/js/bootstrap.js"></script>
+
+    <script>
+  $(document).ready(function(){
+    $('#wrapper').on('click','.project_link', function(){
+      var preview_pane = $(this).parents('.project_list').siblings('.preview_pane_container').find(' .preview_pane');
+      var iframe_src = $(this).attr('href');
+      $('.project_link.active').removeClass('active');
+      $(this).addClass('active');
+      preview_pane.html('<iframe src="'+ iframe_src +'" frameborder="0" width="100%" height="420px"></iframe>');
+
+      return false;
+    });
+
+    $('.project_list').each(function(){
+      $(this).find('.project_link:first-child').trigger('click').addClass('active');
+    });
+
+  })
+  </script>
 
   
   </head>
   <body id="page-top" class="background">
     <div class="">
 
-      <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <div class="container">
-          <a class="js-scroll-trigger   text-uppercase" href="#page-top">Hanh</a>
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#about">About me</a>
-              </li>
-              <li class="nav-item">
-                  <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#projects">Projects</a>
-              </li>
-              <li class="nav-item">
-                  <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#technologies">Technologies</a>
-              </li>
-              <li class="nav-item">
-                     <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#contact">contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- Cover  -->
-      <header class="masthead text-center text-white d-flex">
-        <div class="container my-auto">
-          <div class="row">
-            <div class="col-lg-10 mx-auto">
-              <!-- <div class="box"> <h1> Hello World</h1></div> -->
-              <h1 class="text-uppercase">
-
-              <strong class="fontcolor">Hanh Pham</strong><br>
-              <h2 class="fontcolor">Full Stack Web Developer <br> Seattle Area</h2>
-              </h1>
-              <hr>
-            </div>
-            <div class="col-lg-8 mx-auto">
-              <a href="https://www.linkedin.com/in/myhanhpham25/" target="blank"><i class="fa fa-linkedin-square fa-3x icon" aria-hidden="true"></i></a>
-                <a href="https://github.com/Myhanhpham25" target="blank"><i class="fa fa-github fa-3x icon" aria-hidden="true"></i></a>
-                <a href="mailto:myhanhpham25@gmail.com?Subject=Hello,%20nice%20to%20meet%20you" target="_top"><i class="fa fa-envelope fa-3x icon" aria-hidden="true"></i></a>
-
-            </div>
-          </div>
-        </div>
-      </header>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="js-scroll-trigger text-uppercase" href="#page-top">Hanh</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#about">About me</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#technologies">Technologies</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#contact">contact</a>
+        </li>
+      </ul>
     </div>
+  </div>
+</nav>
+
+<!-- Cover  -->
+<header class="masthead text-center text-white d-flex">
+  <div class="container my-auto">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h1 class="text-uppercase">
+        <strong class="fontcolor">Hanh Pham</strong><br>
+        <h2 class="fontcolor">Full Stack Web Developer <br> Seattle Area</h2>
+        </h1>
+        <hr>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <a href="https://www.linkedin.com/in/myhanhpham25/" target="blank"><i class="fa fa-linkedin-square fa-3x icon" aria-hidden="true"></i></a>
+        <a href="https://github.com/Myhanhpham25" target="blank"><i class="fa fa-github fa-3x icon" aria-hidden="true"></i></a>
+        <a href="mailto:myhanhpham25@gmail.com?Subject=Hello,%20nice%20to%20meet%20you" target="_top"><i class="fa fa-envelope fa-3x icon" aria-hidden="true"></i></a>
+
+      </div>
+    </div>
+  </div>
+</header>
+</div>
     <!-- ABOUT  -->
     <section class="backgroundColor" id="about">
       <div class="container">
@@ -86,7 +110,9 @@
         </div>
       </div>
     </section>
+
     <!-- PROJECTS  -->
+    <section>
     <div class="grayColor">
     <section id="projects">
       <div class="container">
@@ -97,7 +123,139 @@
           </div>
         </div>
       </div>
-      <section class="p-0" id="portfolio">
+  <div id="wrapper" class="container-fluid">
+
+    <!-- TABS  -->
+    <div id="portfolio_content">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#mean" data-toggle="tab">MEAN</a></li>
+        <li><a href="#java" data-toggle="tab">Java</a></li>  
+        <li><a href="#python" data-toggle="tab">Python</a></li>
+        <li><a href="#wordpress" data-toggle="tab">Wordpress</a></li>
+      </ul>
+
+      <!-- TABS FOR MEAN  -->
+        <div id="portfolio_body" class="tab-content panel panel-default">
+        <div class="panel-body tab-pane active" id="mean">
+          <div class="project_list list-group col-md-2">
+            <a href="http://18.216.12.126" class="project_link list-group-item active">
+              <img src="img/portfolio/thumbnails/cooking.png" alt="" class="col-sm-12">
+              <div class="clearfix"></div>
+              <h5 class="list-group-item-heading text-center">Cooking Delight</h5>
+            </a>
+            <!-- <a href="http://village88.com" class="project_link list-group-item">
+              <img src="static/img/jeremy_griffith_2.jpg" alt="" class="col-sm-12">
+              <div class="clearfix"></div>
+              <h5 class="list-group-item-heading text-center">Village88</h5>
+            </a> -->
+           <!--  <a href="http://codingdojo.com" class="project_link list-group-item">
+              <img src="static/img/jeremy_griffith_3.jpg" alt="" class="col-sm-12">
+              <div class="clearfix"></div>
+              <h5 class="list-group-item-heading text-center">Coding Dojo</h5>
+            </a> -->
+          </div>
+          <div class="preview_pane_container col-md-10">
+            <p>AngularJS | MongoDB | ES5 + ES6 | JavaScript OOP | Asychronous JavaScript | Node | Express | AJAX requests | Bootstrap | AWS </p>
+            <p>MEAN is a collection of technologies. Using Angular as JavaScript Front-End Framework to create Single Page Applications; which makes it lighter on the server side. Along with using Express and MongoDB, I created full MVC framework web application from scratch.</p>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="preview_pane"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+<!-- TABS FOR JAVA  -->
+    
+        <div class="panel-body tab-pane" id="java">
+          <div class="project_list list-group col-md-2">
+            <a href="img/portfolio/fullsize/events.png" class="project_link list-group-item active">
+              <img src="img/portfolio/thumbnails/events.png" class="center-block col-sm-12">
+              <div class="clearfix"></div>
+              <h5 class="list-group-item-heading text-center">Plan and Simple</h5>
+            </a>
+            <a href="img/portfolio/fullsize/trivia.png" class="project_link list-group-item">
+              <img src="img/portfolio/thumbnails/trivia.png" class="center-block col-sm-12">
+              <div class="clearfix"></div>
+              <h5 class="list-group-item-heading text-center">Holiday Trivia</h5>
+            </a>
+            <a href="img/portfolio/fullsize/christmas.png" class="project_link list-group-item">
+              <img src="img/portfolio/thumbnails/christmas.png" class="center-block col-sm-12">
+              <div class="clearfix"></div>
+              <h5 class="list-group-item-heading text-center">Christmas Gathering</h5>
+            </a>
+          </div>
+          <div class="preview_pane_container col-md-10">
+            <p>Spring Boot | MySQL Database | AWS | JAVA JDK | Apache Web Server | APIs | Object Oriented Programming with Java </p>
+            <p>The Spring Framework is a large open source framework that consists of several modules. One of these modules is the Spring MVC framework, which allows to build web applications using Java. Spring Boot is a framework used to configure and set up Spring applications very easily. Usually, a Spring project needs several dependencies installed and configured to work, but with Spring Boot, everything comes pre-configured so that developers only have to worry about writing code (and not XML). Spring Boot is a configuration framework that uses the Spring framework. For web applications, the primary Spring module will be the Spring MVC framework. </p>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="preview_pane"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+        <!-- TABS FOR Python  -->
+        <div class="panel-body tab-pane" id="python">
+          <div class="project_list list-group col-md-2">
+            <a href="img/portfolio/fullsize/underconstructon.jpeg" class="project_link list-group-item active">
+              <img src="img/portfolio/thumbnails/underconstructon.jpeg" alt="" class="col-sm-12">
+              <div class="clearfix"></div>
+              <h5 class="list-group-item-heading text-center"></h5>
+            </a>
+            <!-- <a href="http://village88.com" class="project_link list-group-item">
+              <img src="static/img/jeremy_griffith_2.jpg" alt="" class="col-sm-12">
+              <div class="clearfix"></div>
+              <h5 class="list-group-item-heading text-center">Village88</h5>
+            </a> -->
+      <!--       <a href="http://codingdojo.com" class="project_link list-group-item">
+              <img src="static/img/jeremy_griffith_3.jpg" alt="" class="col-sm-12">
+              <div class="clearfix"></div>
+              <h5 class="list-group-item-heading text-center">Coding Dojo</h5>
+            </a> -->
+          </div>
+          <div class="preview_pane_container col-md-10">
+            <p>Django | Flask | MySQL | OOP | SQLite | AWS | </p>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="preview_pane"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+      <!-- TABS FOR WordPress  -->
+        <div class="panel-body tab-pane" id="wordpress">
+          <div class="project_list list-group col-md-2">
+            <a href="https://hahanhadventures.wordpress.com/" class="project_link list-group-item active">
+              <img src="img/portfolio/thumbnails/HHAdventures.png" alt="" class="col-sm-12">
+              <div class="clearfix"></div>
+              <h5 class="list-group-item-heading text-center">H&H Adventures</h5>
+            </a>
+          </div>
+          <div class="preview_pane_container col-md-10">
+            <p>Bootstraps | Templates | Wordpress</p> 
+            <p>I created a simple Blog application using bootstrap, templates, and built-in features availalbe on Wordpress.com. The purpose of this application was to learn and explore more about wordpress, and of course, sharing adventures with my friends and families.</p>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="preview_pane"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+      <!-- <section class="p-0" id="portfolio">
         <div class="container-fluid p-0">
           <div class="row no-gutters popup-gallery">
             <div class="col-lg-4 col-sm-6">
@@ -193,8 +351,8 @@
           </div>
         </div>
       </section>
-    </section>
-    <
+    </section> -->
+    
     <!-- TECHNOLOGIES -->
     <div class="rainier">
       <section id="technologies">
@@ -210,7 +368,7 @@
           <div class="row">
             <div class="col-lg-3 col-md-6 text-center">
               <div class="service-box mt-5 mx-auto">
-                <i id="showLanguage" class="fa fa-globe fa-3x" aria-hidden="true"></i>
+                <!-- <i id="showLanguage" class="fa fa-globe fa-3x" aria-hidden="true"></i> -->
                 <h3 class="mb-3">Languages</h3>
                 <div id="language">
                   <a href="https://docs.oracle.com/javase/8/" target="blank" class="btn btn-default btn-lg">
@@ -236,7 +394,7 @@
             </div>
             <div class="col-lg-3 col-md-6 text-center">
               <div class="service-box mt-5 mx-auto">
-                <i id="showFramworks" class="fa fa-files-o fa-3x" aria-hidden="true"></i>
+                <!-- <i id="showFramworks" class="fa fa-files-o fa-3x" aria-hidden="true"></i> -->
                 <h3 class="mb-3">Frameworks</h3>
                 <div id="frameworks">
                   <a href="https://spring.io/" target="blank" class="btn btn-default btn-lg">
@@ -259,7 +417,7 @@
             </div>
             <div class="col-lg-3 col-md-6 text-center">
               <div class="service-box mt-5 mx-auto">
-                <i class="fa fa-book fa-3x" aria-hidden="true"></i>
+                <!-- <i class="fa fa-book fa-3x" aria-hidden="true"></i> -->
                 <h3 class="mb-3">Libraries</h3>
                 <!-- <a href="https://reactjs.org/" class="btn btn-default btn-lg">
                   <img class="little" id="rct" src="./img/reactJs.png" alt="ReactJs">
@@ -280,7 +438,7 @@
             </div>
             <div class="col-lg-3 col-md-6 text-center">
               <div class="service-box mt-5 mx-auto">
-                <i class="fa fa-database fa-3x" aria-hidden="true"></i>
+                <!-- <i class="fa fa-database fa-3x" aria-hidden="true"></i> -->
                 <h3 class="mb-3">Databases</h3>
                 <a href="http://www.mysql.com/" target="blank" class="btn btn-default btn-lg">
                   <img class="little" src="./img/mysql.png" alt="MySql">
@@ -295,7 +453,7 @@
             </div>
             <div class="col-lg-3 col-md-6 text-center">
               <div class="service-box mt-5 mx-auto">
-                <i class="fa fa-server fa-3x" aria-hidden="true"></i>
+                <!-- <i class="fa fa-server fa-3x" aria-hidden="true"></i> -->
                 <h3 class="mb-3">Servers</h3>
                 <a href="https://aws.amazon.com/" target="blank" class="btn btn-default btn-lg">
                   <img class="little" id="aws" src="./img/aws.png" alt="AWS">
@@ -308,7 +466,7 @@
             </div>
             <div class="col-lg-3 col-md-6 text-center">
               <div class="service-box mt-5 mx-auto">
-                <i class="fa fa-pencil-square fa-3x" aria-hidden="true"></i>
+                <!-- <i class="fa fa-pencil-square fa-3x" aria-hidden="true"></i> -->
                 <h3 class="mb-3">Dev Tools</h3>
                 <a href="https://github.com/" target="blank" class="btn btn-default btn-lg">
                   <img class="little" src="./img/github.png" alt="GitHub">
@@ -328,39 +486,43 @@
         </div>
       </section>
     </div>
-    <!-- CONTACT  -->
-    <div class="grayColor">
-      <section id="contact">
-        <div class="container ">
-          <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-              <h1 class="text-uppercase">
-              <strong class="fontcolor">Get in Touch!</strong>
-              </h1>
-              <img id="me" src="./img/me.png" width="200px" alt="me photo">
-              
-              <hr class="my-4">
-              <p class="mb-5">Let's start a conversation! If you'd like to collaborate or have any fun project ideas, feel free to contact me.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 ml-auto text-center">
-              <a href="./assets/Hanh_Pham_Resume2018.pdf" download>
-              <i class="fa fa-file-pdf-o fa-3x" aria-hidden="true"></i></a>
-              <p class="fontcolor">Resume</p>
-            </div>
-            <div class="col-lg-4 mr-auto text-center">
-              <p>
-                <a href=href="mailto:myhanhpham25@gmail.com?Subject=Hello,%20nice%20to%20meet%20you" target="_top">
-                <i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i></a>
-                <p class="fontcolor">myhanhpham25@gmail.com</p>
-              </p>
-            </div>
-          </div>
-          <a class="btn btn-primary btn-l js-scroll-trigger buttoncolor place box" href="#page-top">Back to the Top</a>
+
+<!-- CONTACT  -->
+<div class="grayColor">
+  <section id="contact">
+    <div class="container ">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h1 class="text-uppercase">
+          <strong class="fontcolor">Get in Touch!</strong>
+          </h1>
+          <img id="me" src="./img/me.png" width="200px" alt="me photo">
+          
+          <hr class="my-4">
+          <p class="mb-5">Let's start a conversation! If you'd like to collaborate or have any fun project ideas, feel free to contact me.</p>
         </div>
-      </section>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 ml-auto text-center">
+          <a href="./assets/HanhResume18.pdf" download>
+          <i class="fa fa-file-pdf-o fa-3x icon" aria-hidden="true"></i></a>
+          <p class="fontcolor">Resume</p>
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+          <p>
+            <a href="mailto:myhanhpham25@gmail.com?Subject=Hello,%20nice%20to%20meet%20you" target="_top"><i class="fa fa-envelope fa-3x icon" aria-hidden="true"></i></a>
+            <p class="fontcolor">myhanhpham25@gmail.com</p>
+          </p>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-l js-scroll-trigger buttoncolor place box" href="#page-top">Back to the Top</a>
     </div>
+  </section>
+</div>
+<div>
+<footer class="footer">Copyright &copy; 2018 All Rights Reserved.</footer>
+</div>
+    
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

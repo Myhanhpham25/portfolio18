@@ -40,6 +40,10 @@
       $(this).find('.project_link:first-child').trigger('click').addClass('active');
     });
 
+    $(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
   })
   </script>
 
@@ -102,7 +106,7 @@
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading text-white">About me</h2>
             <hr class="light my-4">
-            <p class="text-faded mb-4">I am a highly motivated web developer with a passion for learning new technologies that continues to grow everyday. Developing web applications, watching as they grow, and provide use to users is a great feeling; which I have come to appreciate and hope to continue.</p>
+            <p class="mb-4">I am a highly motivated web developer with a passion for learning new technologies that continues to grow everyday. Developing web applications, watching as they grow, and provide use to users is a great feeling; which I have come to appreciate and hope to continue.</p>
             <a class="btn btn-light btn-xl js-scroll-trigger box" href="#projects">Projects</a>
           </div>
         </div>
@@ -146,7 +150,7 @@
           </div>
           <div class="preview_pane_container col-md-10">
             <p>AngularJS | MongoDB | ES5 + ES6 | JavaScript OOP | Asychronous JavaScript | Node | Express | AJAX requests | Bootstrap | AWS </p>
-            <p>MEAN is a collection of technologies. Using Angular as JavaScript Front-End Framework to create Single Page Applications; which makes it lighter on the server side. Along with using Express and MongoDB, I created full MVC framework web application from scratch.</p>
+            <p>MEAN is a collection of technologies: MongoDB, Express, AngularJS, and Node. A cooking app created in JavaScript using Angular as JavaScript Front-End Framework to create a Single Page Applications. This application allows users to search their favorite recipes and store it in their cookbook for a later time. Users are also able to share their own personal recipes and other users can save it to their own cookbook. In addition, all users can see recipes that were saved on the community dashboard, where they are able to post comments on personal recipes that were shared. Application also uses CRUD operations, Bootstrap styles, and is deployed to AWS EC2. </p>
             <div class="panel panel-default">
               <div class="panel-body">
                 <div class="preview_pane"></div>
@@ -160,25 +164,28 @@
     
         <div class="panel-body tab-pane" id="java">
           <div class="project_list list-group col-md-2">
-            <a href="img/portfolio/fullsize/events.png" class="project_link list-group-item active">
+            
+            <a href="img/portfolio/fullsize/events.png" class="project_link list-group-item active" data-toggle="popover" title="Plan and Simple - Event Planning Application" data-content=" An event planning app created in Java using Spring Framework. This application allows users to add an event to the dashboard where other users can choice to attend or post messages to find out more details about the event, with additional validations implemented to prevent past dating.  Using MySQL as the database, events are display by location of the user's information and displayed by events in other states.">
               <img src="img/portfolio/thumbnails/events.png" class="center-block col-sm-12">
               <div class="clearfix"></div>
               <h5 class="list-group-item-heading text-center">Plan and Simple</h5>
             </a>
-            <a href="img/portfolio/fullsize/trivia.png" class="project_link list-group-item">
+ 
+            <a href="img/portfolio/fullsize/trivia.png" class="project_link list-group-item" data-toggle="popover" title="Holiday Trivia" data-content="A fun Holiday style question Trivia. Users are able to pick multiple topics and numbers of questions they wish to play. Users can see top scores. ">
               <img src="img/portfolio/thumbnails/trivia.png" class="center-block col-sm-12">
               <div class="clearfix"></div>
               <h5 class="list-group-item-heading text-center">Holiday Trivia</h5>
             </a>
-            <a href="img/portfolio/fullsize/christmas.png" class="project_link list-group-item">
+            <a href="img/portfolio/fullsize/christmas.png" class="project_link list-group-item" data-toggle="popover" title="Christmas Gathering" data-content="A Christmas party planning application. A holiday invitation with a potluck signup and RSVP. Users are able to post comments.">
               <img src="img/portfolio/thumbnails/christmas.png" class="center-block col-sm-12">
               <div class="clearfix"></div>
               <h5 class="list-group-item-heading text-center">Christmas Gathering</h5>
             </a>
+
           </div>
           <div class="preview_pane_container col-md-10">
             <p>Spring Boot | MySQL Database | AWS | JAVA JDK | Apache Web Server | APIs | Object Oriented Programming with Java </p>
-            <p>Using Spring Tool Suite, an Eclipes-based development environment that is customized for developing Spring applications. One of these modules from the Spring Framework is Spring MVC framework, which allows to build web applications using Java.</p>
+            <p>Using Spring Tool Suite, an Eclipes-based development environment that is customized for developing Spring applications. One of these modules from the Spring Framework is Spring MVC framework, which allows to build web applications using Java. </p>
             <div class="panel panel-default">
               <div class="panel-body">
                 <div class="preview_pane"></div>

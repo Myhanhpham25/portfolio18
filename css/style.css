@@ -116,3 +116,7 @@
 .preview_pane{
 width: auto;
 }
+
+div.preview_pane{
+  width: auto;
+}

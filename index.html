@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Hanh Pham</title>
+    <title>Ha's Dirty 30</title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template -->
@@ -17,404 +16,297 @@
     <link href="css/creative.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <!-- projects section css features  -->
     <link rel="stylesheet" href="static/css/bootstrap.css">
-   <script src="static/js/jquery-1.11.0.min.js"></script>
+    <script src="static/js/jquery-1.11.0.min.js"></script>
     <script src="static/js/bootstrap.js"></script>
-
     <script>
-  $(document).ready(function(){
+    $(document).ready(function(){
     $('#wrapper').on('click','.project_link', function(){
-      var preview_pane = $(this).parents('.project_list').siblings('.preview_pane_container').find(' .preview_pane');
-      var iframe_src = $(this).attr('href');
-      $('.project_link.active').removeClass('active');
-      $(this).addClass('active');
-      preview_pane.html('<iframe src="'+ iframe_src +'" frameborder="0" width="100%" height="420px"></iframe>');
-
-      return false;
+    var preview_pane = $(this).parents('.project_list').siblings('.preview_pane_container').find(' .preview_pane');
+    var iframe_src = $(this).attr('href');
+    $('.project_link.active').removeClass('active');
+    $(this).addClass('active');
+    preview_pane.html('<iframe src="'+ iframe_src +'" frameborder="0" width="100%" height="420px"></iframe>');
+    return false;
     });
-
     $('.project_list').each(function(){
-      $(this).find('.project_link:first-child').trigger('click').addClass('active');
+    $(this).find('.project_link:first-child').trigger('click').addClass('active');
     });
-
     $(function () {
-  $('[data-toggle="popover"]').popover()
-})
-
-  })
-  </script>
-
-  
+    $('[data-toggle="popover"]').popover()
+    })
+    });
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jul 26, 2019 15:37:25").getTime();
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    // Get today's date and time
+    var now = new Date().getTime();
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Display the result in the element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    // If the count down is finished, write some text
+    if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+    }, 1000);
+    </script>
   </head>
   <body id="page-top" class="background">
     <div class="">
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-  <div class="container">
-    <a class="js-scroll-trigger text-uppercase" href="#page-top">Hanh Pham</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#about">About me</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#technologies">Technologies</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#contact">contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Cover  -->
-<header class="masthead text-center text-white d-flex">
-  <div class="container my-auto">
-    <div class="row">
-      <div class="col-lg-10 mx-auto">
-        <h1 class="text-uppercase">
-        <strong class="fontcolor">Hanh Pham</strong><br>
-        <h2 class="fontcolor">Full Stack Web Developer <br> Seattle Area</h2>
-        </h1>
-        <hr>
-      </div>
-      <div class="col-lg-8 mx-auto">
-        <a href="https://www.linkedin.com/in/myhanhpham25/" target="blank"><i class="fa fa-linkedin-square fa-3x icon" aria-hidden="true"></i></a>
-        <a href="https://github.com/Myhanhpham25" target="blank"><i class="fa fa-github fa-3x icon" aria-hidden="true"></i></a>
-        <a href="mailto:myhanhpham25@gmail.com?Subject=Hello,%20nice%20to%20meet%20you" target="_top"><i class="fa fa-envelope fa-3x icon" aria-hidden="true"></i></a>
-
-      </div>
-    </div>
-  </div>
-</header>
-</div>
-    <!-- ABOUT  -->
-    <section class="backgroundColor" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">About me</h2>
-            <hr class="light my-4">
-            <p class="mb-4">I am a highly motivated web developer with a passion for learning new technologies that continues to grow everyday. Developing web applications, watching as they grow, and provide use to users is a great feeling; which I have come to appreciate and hope to continue.</p>
-            <a class="btn btn-light btn-xl js-scroll-trigger box" href="#projects">Projects</a>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+          <a class="js-scroll-trigger text-uppercase" href="#page-top">Ha's Dirty 30</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#location">Location</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#agenda">Agenda</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#menu">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#gears">Camping Gears</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary btn-sm js-scroll-trigger buttoncolor box" href="#contact">contact</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS  -->
-    <section>
-    <div class="grayColor">
-    <section id="projects">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Projects</h2>
-            <hr class="my-4">
-          </div>
-        </div>
-      </div>
-  <div id="wrapper" class="container-fluid">
-
-    <!-- TABS  -->
-    <div id="portfolio_content">
-      <ul class="nav nav-tabs">
-        <li class="active"><a href="#mean" data-toggle="tab">MEAN</a></li>
-        <li><a href="#java" data-toggle="tab">Java</a></li>  
-        <li><a href="#python" data-toggle="tab">Python</a></li>
-        <li><a href="#wordpress" data-toggle="tab">Wordpress</a></li>
-      </ul>
-
-      <!-- TABS FOR MEAN  -->
-        <div id="portfolio_body" class="tab-content panel panel-default">
-
-        <div class="panel-body tab-pane active" id="mean">
-          <div class="project_list list-group col-md-2">
-            <a href="http://18.216.12.126" class="project_link list-group-item active">
-              <img src="img/portfolio/thumbnails/cooking.png" alt="" class="col-sm-12">
-              <div class="clearfix"></div>
-              <h5 class="list-group-item-heading text-center">Cooking Delight</h5>
-            </a>
-
-          </div>
-          <div class="preview_pane_container col-md-10">
-            <p>AngularJS | MongoDB | ES5 + ES6 | JavaScript OOP | Asychronous JavaScript | Node | Express | AJAX requests | Bootstrap | AWS </p>
-            <p>MEAN is a collection of technologies: MongoDB, Express, AngularJS, and Node. A cooking app created in JavaScript using Angular as JavaScript Front-End Framework to create a Single Page Applications. This application allows users to search their favorite recipes and store it in their cookbook for a later time. Users are also able to share their own personal recipes and other users can save it to their own cookbook. In addition, all users can see recipes that were saved on the community dashboard, where they are able to post comments on personal recipes that were shared. Application also uses CRUD operations, Bootstrap styles, and is deployed to AWS EC2. </p>
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <div class="preview_pane"></div>
-              </div>
+      </nav>
+      <!-- Cover  -->
+      <header class="masthead text-center text-white d-flex">
+        <div class="container my-auto">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h1 class="text-uppercase">
+              <strong class="fontcolor text-white">Calling all Campers!</strong><br>
+              <h2 class="fontcolor text-white">Join us for a wild adventure</h2><h2>July 26-28</h2>
+              </h1>
+              <h2 id="demo"></h2>
+              <hr>
             </div>
           </div>
-          <div class="clearfix"></div>
-        </div>
-
-<!-- TABS FOR JAVA  -->
-    
-        <div class="panel-body tab-pane" id="java">
-          <div class="project_list list-group col-md-2">
-            
-            <a href="img/portfolio/fullsize/events.png" class="project_link list-group-item active" data-toggle="popover" title="Plan and Simple - Event Planning Application" data-content=" An event planning app created in Java using Spring Framework. This application allows users to add an event to the dashboard where other users can choice to attend or post messages to find out more details about the event, with additional validations implemented to prevent past dating.  Using MySQL as the database, events are display by location of the user's information and displayed by events in other states.">
-              <img src="img/portfolio/thumbnails/events.png" class="center-block col-sm-12">
-              <div class="clearfix"></div>
-              <h5 class="list-group-item-heading text-center">Plan and Simple</h5>
-            </a>
- 
-            <a href="img/portfolio/fullsize/trivia.png" class="project_link list-group-item" data-toggle="popover" title="Holiday Trivia" data-content="A fun Holiday style question Trivia. Users are able to pick multiple topics and numbers of questions they wish to play. Users can see top scores. ">
-              <img src="img/portfolio/thumbnails/trivia.png" class="center-block col-sm-12">
-              <div class="clearfix"></div>
-              <h5 class="list-group-item-heading text-center">Holiday Trivia</h5>
-            </a>
-            <a href="img/portfolio/fullsize/christmas.png" class="project_link list-group-item" data-toggle="popover" title="Christmas Gathering" data-content="A Christmas party planning application. A holiday invitation with a potluck signup and RSVP. Users are able to post comments.">
-              <img src="img/portfolio/thumbnails/christmas.png" class="center-block col-sm-12">
-              <div class="clearfix"></div>
-              <h5 class="list-group-item-heading text-center">Christmas Gathering</h5>
-            </a>
-
-          </div>
-          <div class="preview_pane_container col-md-10">
-            <p>Spring Boot | MySQL Database | AWS | JAVA JDK | Apache Web Server | APIs | Object Oriented Programming with Java </p>
-            <p>Using Spring Tool Suite, an Eclipes-based development environment that is customized for developing Spring applications. One of these modules from the Spring Framework is Spring MVC framework, which allows to build web applications using Java. </p>
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <div class="preview_pane"></div>
-              </div>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-
-        <!-- TABS FOR Python  -->
-        <div class="panel-body tab-pane" id="python">
-          <div class="project_list list-group col-md-2">
-            <a href="img/portfolio/fullsize/underconstructon.jpeg" class="project_link list-group-item active">
-              <img src="img/portfolio/thumbnails/underconstructon.jpeg" alt="" class="col-sm-12">
-              <div class="clearfix"></div>
-              <h5 class="list-group-item-heading text-center"></h5>
-            </a>
-
-          </div>
-          <div class="preview_pane_container col-md-10">
-            <p>Django | Flask | MySQL | OOP | SQLite | AWS | </p>
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <div class="preview_pane"></div>
-              </div>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-
-      <!-- TABS FOR WordPress  -->
-        <div class="panel-body tab-pane" id="wordpress">
-          <div class="project_list list-group col-md-2">
-            <a href="https://hahanhadventures.wordpress.com/" class="project_link list-group-item active">
-              <img src="img/portfolio/thumbnails/HHAdventures.png" alt="" class="col-sm-12">
-              <div class="clearfix"></div>
-              <h5 class="list-group-item-heading text-center">H&H Adventures</h5>
-            </a>
-          </div>
-          <div class="preview_pane_container col-md-10">
-            <p>Bootstraps | Templates | Wordpress</p> 
-            <p>I created a simple Blog application using bootstrap, templates, and built-in features availalbe on Wordpress.com. The purpose of this application was to learn and explore more about wordpress, and of course, sharing adventures with my friends and families.</p>
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <div class="preview_pane"></div>
-              </div>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-
+        </header>
       </div>
-    </div>
-  </div>
-
-</section>
-    
-    <!-- TECHNOLOGIES -->
-    <div class="rainier">
-      <section id="technologies">
+      <!-- ABOUT  -->
+      <section class="backgroundColor" id="location">
         <div class="container">
           <div class="row">
-            <div class="col-lg-12 text-center">
-              <h2 class="section-heading">Technologies</h2>
-              <hr class="my-4">
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 text-center">
-              <div class="service-box mt-5 mx-auto">
-                <h3 class="mb-3">Languages</h3>
-                <div id="language">
-                  <a href="https://docs.oracle.com/javase/8/" target="blank" class="btn btn-default btn-lg">
-                    <img class="little" src="./img/java.png" alt="java">
-                  </a>
-                  <a href="http://mean.io/" target="blank"class="btn btn-default btn-lg">
-                    <img class="little" src="./img/MEAN.png" alt="MEAN">
-                  </a>
-                  <a href="http://www.w3.org/TR/html5/" target="blank" class="btn btn-default btn-lg">
-                    <img class="little" src="./img/HTML.png" alt="HTML">
-                  </a>
-                  <a href="http://www.w3.org/Style/CSS/Overview.en.html" target="blank" class="btn btn-default btn-lg">
-                    <img class="little" src="./img/CSS.png" alt="CSS">
-                  </a>
-                  <a href="http://www.javascript.com" target="blank" class="btn btn-default btn-lg">
-                    <img class="little" src="./img/JavaScript.png" alt="JavaScript">
-                  </a>
-                  <a href="https://www.python.org/" target="blank" class="btn btn-default btn-lg">
-                    <img class="little" src="./img/python.png" alt="Python">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-              <div class="service-box mt-5 mx-auto">
-                <h3 class="mb-3">Frameworks</h3>
-                <div id="frameworks">
-                  <a href="https://spring.io/" target="blank" class="btn btn-default btn-lg">
-                    <img class="little" src="./img/spring.png" alt="Spring">
-                  </a>
-                  <a href="https://angular.io/" target="blank" class="btn btn-default btn-lg">
-                    <img class="little" src="./img/angular.png" alt="Angular">
-                  </a>
-                  <a href="http://www.expressjs.com" target="blank" class="btn btn-default btn-lg">
-                    <img class="little" src="./img/expressjs.png" alt="ExpressJs">
-                  </a>
-                  <a href="http://www.nodejs.org/en/" target="blank" class="btn btn-default btn-lg">
-                    <img class="little" src="./img/nodejs.png" alt="NodeJs">
-                  </a>
-                  <a href="https://www.fullstackpython.com/django.html" target="blank" class="btn btn-default btn-lg">
-                    <img class="little" src="./img/django.png" alt="Django">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-              <div class="service-box mt-5 mx-auto">
-                <h3 class="mb-3">Libraries</h3>
-                <!-- <a href="https://reactjs.org/" class="btn btn-default btn-lg">
-                  <img class="little" id="rct" src="./img/reactJs.png" alt="ReactJs">
-                </a> -->
-                <a href="http://www.jquery.com" target="blank" class="btn btn-default btn-lg">
-                  <img class="little" src="./img/jQuery.png" alt="JQuery">
-                </a>
-                <a href="https://learn.jquery.com/ajax/" target="blank" class="btn btn-default btn-lg">
-                  <img class="little" src="./img/ajax.png" alt="AJAX">
-                </a>
-                <a href="http://socket.io" target="blank" class="btn btn-default btn-lg">
-                  <img class="little" src="./img/socket.png" alt="Socket.io">
-                </a>
-                <a href="http://www.getbootstrap.com/" target="blank" class="btn btn-default btn-lg">
-                  <img class="little" src="./img/bootstrap.png" alt="Bootstrap">
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-              <div class="service-box mt-5 mx-auto">
-                <h3 class="mb-3">Databases</h3>
-                <a href="http://www.mysql.com/" target="blank" class="btn btn-default btn-lg">
-                  <img class="little" src="./img/mysql.png" alt="MySql">
-                </a>
-                <a href="https://www.sqlite.org/" target="blank" class="btn btn-default btn-lg">
-                  <img class="little" src="./img/sqlite.png" alt="SqLite">
-                </a>
-                <a href="https://www.mongodb.com/" target="blank" class="btn btn-default btn-lg">
-                  <img class="little" src="./img/mongodb.png" alt="MongoDb">
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-              <div class="service-box mt-5 mx-auto">
-                <h3 class="mb-3">Servers</h3>
-                <a href="https://aws.amazon.com/" target="blank" class="btn btn-default btn-lg">
-                  <img class="little" id="aws" src="./img/aws.png" alt="AWS">
-                </a>
-                <a href="http://www.mamp.info/en/" target="blank" class="btn btn-default btn-lg">
-                <img class="little" src="./img/mamp.png" alt="MAMP"></a>
-                <a href="http://tomcat.apache.org/" target="blank" class="btn btn-default btn-lg">
-                <img class="little" src="./img/tomcat.png" alt="tomcat"></a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-              <div class="service-box mt-5 mx-auto">
-                <h3 class="mb-3">Dev Tools</h3>
-                <a href="https://github.com/" target="blank" class="btn btn-default btn-lg">
-                  <img class="little" src="./img/github.png" alt="GitHub">
-                </a>
-                <a href="https://en.wikipedia.org/wiki/Terminal_(macOS)" target="blank" class="btn btn-default btn-lg">
-                  <img class="little" id="trm" src="./img/terminal.png" alt="Terminal">
-                </a>
-                <a href="https://code.visualstudio.com/" target="blank" class="btn btn-default btn-lg">
-                  <img class="little" id="vsc" src="./img/vscode.jpg" alt="VsCode">
-                </a>
-                <a href="https://www.sublimetext.com/" target="blank" class="btn btn-default btn-lg">
-                  <img class="little" id="vsc" src="./img/sublime.png" alt="sublime">
-                </a>
-              </div>
+            <div class="col-lg-8 mx-auto text-center">
+              <h2 class="section-heading text-white">Maggie Lake</h2>
+              <hr class="light my-4">
+              <p class="mb-4"><h3>Two Routes:</h3></p>
+              <p class="mb-4">Non Ferry: Drive I-5 south - Exit 132B, follow signs for Gig Harbor/Bremerton/WA-16 W</p>
+              <p>Ferry: Take the Southworth - Fauntleroy ferry to Port Orchard (Toll Road)
+                <a href="https://www.wsdot.wa.gov/ferries/fares/FaresDetail.aspx?tripdate=20190726&departingterm=9&arrivingterm=20" target="blank" class="btn btn-default btn-sm">Ferry Fares</a>
+              </p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.432436950419!2d-123.03247798440378!3d47.40350580997878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5491c7e554fc7f73%3A0x14584a3a32c1e1a1!2s320+NE+Lakeshore+Dr+N%2C+Tahuya%2C+WA+98588!5e0!3m2!1sen!2sus!4v1561093968890!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
           </div>
         </div>
       </section>
-    </div>
-
-<!-- CONTACT  -->
-<div class="grayColor">
-  <section id="contact">
-    <div class="container ">
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <h1 class="text-uppercase">
-          <strong class="fontcolor">Get in Touch!</strong>
-          </h1>
-          <img id="me" src="./img/me.png" width="200px" alt="me photo">
-          
-          <hr class="my-4">
-          <p class="mb-5">Let's start a conversation! If you'd like to collaborate or have any fun project ideas, feel free to contact me.</p>
+      <div class="">
+        <section id="agenda">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading text-white">Agenda</h2>
+                <h3 class="section-heading text-white">Check-in: 3:00 PM | Check-out: 2:00 PM</h3>
+                <hr class="light my-4">
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="backgroundColor" id="menu">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+              <h2 class="section-heading text-white">Menu</h2>
+              <hr class="light my-4">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                      <h4 class="mb-3">Ramen Bar</h4>
+                      <h5>(ALL DAY EVERYDAY)</h5>
+                      <div id="">
+                        <p>Instant Ramen (Spicy/NoSpicy)</p>
+                        <p>Spam, Fishballs, Fishcakes</p>
+                        <p>Mushrooms, Veggies,</p>
+                        <p>Eggs, Meatballs,</p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                      <h4 class="mb-3">Breakfast(Self-Served)</h4>
+                      <div id="">
+                        <p>Mimosa</p>
+                        <p>Eggs, Spam, Bread</p>
+                        <p>Oatmeals, Fruits</p>
+                        <p>Tea / Instant Coffee</p>
+                        <p></p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                      <h4 class="mb-3">Lunch(Self-Served)</h4>
+                      <p>Hot Dogs, Burgers</p>
+                      <p>Lettuce, Tomatos, Cheese</p>
+                      <p>Ketcup, Mustards, Sour Cream, Mayo, Pickles,</p>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                  <div class="service-box mt-5 mx-auto">
+                    <h4 class="mb-3">Dinner (Group Effort)</h4>
+                    <div id="">
+                      <p>Short Ribs/ Chicken Noodle Bowl: </p>
+                      <p>Noodles, Pickled Veggies, Veggies, </p>
+                      <p>Short Ribs, Cilantro, Fish Sauce</p>
+                      <p></p>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                  <div class="service-box mt-5 mx-auto">
+                    <h4 class="mb-3">Fruit</h4>
+                    <div id="">
+                      
+                      <p>Watermelon</p>
+                      <p>Seasonal Fruit</p>
+                      <p></p>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                  <div class="service-box mt-5 mx-auto">
+                    <h4 class="mb-3">Snacks</h4>
+                    <p>Chips</p>
+                    <p>S'mores</p>
+                    <p>Cookies</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <p class="mb-4"></p>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-4 ml-auto text-center">
-          <a href="./assets/HanhResume18.pdf" download>
-          <i class="fa fa-file-pdf-o fa-3x" aria-hidden="true"></i></a>
-          <p class="fontcolor">Resume</p>
+    </section>
+    <!-- camping gears -->
+    <div class="rainier">
+      <section id="gears">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-white" class="section-heading">Gear List</h2>
+              <hr class="my-4">
+              <p class="mb-4 text-white">The key to staying comfortable while camping is be prepared for all weather conditions. During the day will be nice and warm and at night will be a bit chilly. Below are a few list of things you are responsbile for, shareable gears (let me know if you want to add things to this list)</p>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-4 mr-auto text-center">
-          <p>
-            <a href="mailto:myhanhpham25@gmail.com?Subject=Hello,%20nice%20to%20meet%20you" target="_top"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a>
-            <p class="fontcolor">myhanhpham25@gmail.com</p>
-          </p>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <h3 class="mb-3 text-white">Your Responsible</h3>
+                <div id="language" class="text-white">
+                  <p>Tent</p>
+                  <p>Sleeping Bags, Sleeping Pad, Pillows</p>
+                  <p>Campimg Chairs,</p>
+                  <p>Lanterns, Headlamps</p>
+                  <p>Reusable Cups</p>
+                  <p>Sunblock</p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center text-white">
+              <div class="service-box mt-5 mx-auto">
+                <h3 class="mb-3">Shareable Items</h3>
+                <div id="frameworks">
+                  <p>Canopy, Mesh Canopy</p>
+                  <p>Small Folded Table, Regular Folded Table (Hanh/Rah)</p>
+                  <p>Grill, Stove, Gas</p>
+                  <p>Paddle Boards x2 (Hanh/Lan)</p>
+                  <p>Kayak (My/Nam)</p>
+                  <p>Wood/ fire starters</p>
+                  <p>Coolers</p>
+                  <p>Floaties</p>              
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 text-center text-white">
+              <div class="service-box mt-5 mx-auto">
+                <h3 class="mb-3">Optional Items</h3>
+                <p>Mosquitos Spray</p>
+                <p>Life Jackets</p>
+              </div>
+            </div>
+            
+            
+          </div>
         </div>
-      </div>
-      <a class="btn btn-primary btn-l js-scroll-trigger buttoncolor place box" href="#page-top">Back to the Top</a>
+      </section>
     </div>
-  </section>
-</div>
-<div>
-<footer class="footer">Copyright &copy; 2018 All Rights Reserved.</footer>
-</div>
-    
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
-  </body>
+    <!-- CONTACT  -->
+    <div class="grayColor">
+      <section id="contact">
+        <div class="container ">
+          <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+              <h1 class="text-uppercase">
+              <strong class="fontcolor">Please confirm your attendence!</strong>
+              </h1>
+              <!-- <img id="me" src="./img/me.png" width="200px" alt="me photo"> -->
+              <hr class="my-4">
+              <p class="mb-5"></p>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-l js-scroll-trigger buttoncolor place box" href="#page-top">Back to the Top</a>
+        </div>
+      </section>
+    </div>
+    <div>
+    <footer class="footer">Copyright &copy; 2019 All Rights Reserved.</footer>
+  </div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.min.js"></script>
+</body>
 </html>

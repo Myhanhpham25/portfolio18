@@ -13,6 +13,10 @@
     background-attachment: fixed;
 	}
 
+.weather{
+  background-image: url("../img/portfolio/fullsize/MaggieLakeWeather.png");
+}
+
 .fontcolor{
 	color: #696969;
 	text-shadow: 1px 1px #00bfff;

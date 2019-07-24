@@ -9,8 +9,8 @@
 
 .background{
     background-image: url("../img/portfolio/fullsize/hatranedit.png");
-    background-size: contain;
-    /*background-size: cover;*/
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 	}
 

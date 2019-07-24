@@ -8,9 +8,9 @@
 }
 
 .background{
-	  /*background-image: url("../img/portfolio/fullsize/hatranCar.png");*/
     background-image: url("../img/portfolio/fullsize/hatranedit.png");
-    background-size: cover;
+    background-size: contain;
+    /*background-size: cover;*/
     background-attachment: fixed;
 	}
 

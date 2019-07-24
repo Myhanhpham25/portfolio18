@@ -9,6 +9,7 @@
 
 .background{
     background-image: url("../img/portfolio/fullsize/hatranedit.png");
+    min-height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -104,14 +105,6 @@
 .box:hover {
   background: #696969;
   border-radius: 50%;
-}
-
-.rainier{
-  position: relative;
-  background-image: url("../img/rainier.png");
-  background-size: cover;
-  background-attachment: fixed;
- 
 }
 
 .footer{

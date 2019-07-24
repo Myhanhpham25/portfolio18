@@ -9,7 +9,6 @@
 
 .background{
     background-image: url("../img/portfolio/fullsize/hatranedit.png");
-    min-height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
